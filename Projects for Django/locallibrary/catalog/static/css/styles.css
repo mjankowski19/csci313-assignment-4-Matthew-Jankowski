@@ -1,7 +1,26 @@
+
 .sidebar-nav {
+  
   margin-top: 20px;
   padding: 0;
   list-style: none;
+}
+
+body{
+  background-color:lightslategray;
+}
+
+h1{
+  color: darkgreen;
+  text-align: center;
+}
+
+a{
+  color: green;
+}
+
+button{
+  color: gold;
 }
 
 #logout-form {

@@ -105,6 +105,9 @@ class BookInstance(models.Model):
         ordering = ['due_back']
         permissions = (("can_mark_returned", "Set book as returned"),)
 
+    def get_absolute_url(self):
+        return reverse('bookinstance-detail', kwargs={"pk": self.pk})
+
     def __str__(self):
         """String for representing the Model object."""
         return f'{self.id} ({self.book.title})'

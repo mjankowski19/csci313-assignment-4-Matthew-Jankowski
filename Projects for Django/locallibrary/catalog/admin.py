@@ -6,6 +6,12 @@ from .models import Author, Genre, Book, BookInstance, Language
 admin.site.register(Genre)
 admin.site.register(Language)
 
+class BooksInline(admin.TabularInline):
+    model = Book
+
+class BooksInstanceInline(admin.TabularInline):
+    model = BookInstance
+
 # Define the admin class
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
